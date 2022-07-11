@@ -34,7 +34,7 @@ export class AppController {
     `
 
     if (isProd) {
-      const manifest = JSON.parse(readFileSync(join(__dirname, '..', 'public')+'/vite-manifest.json', 'utf8'));
+      const manifest = JSON.parse(readFileSync(join(__dirname, 'public')+'/vite-manifest.json', 'utf8'));
       appHTML = `<div id='root'></div>`
       scriptHTML = `
       <script type="module" crossorigin src="/${manifest['src/pages/index.tsx']['file']}"></script>
